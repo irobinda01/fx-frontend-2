@@ -2,7 +2,10 @@
 import plugin from 'tailwindcss/plugin'
 
 export default {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {},
   },
@@ -38,7 +41,7 @@ export default {
         '.nav-btn': {
           padding: '2px 5px',
           'font-size': '16px',
-          'font-width': 'bolder',
+          'font-size': 'bolder',
           color: '#fff',
           background: 'linear-gradient(65deg, #6D42AC, #8667E6)',
           border: 'none',
@@ -73,7 +76,7 @@ export default {
         '.background-btn1': {
           padding: '30px 50px',
           'font-size': '16px',
-          'font-width': 'bolder',
+          'font-size': 'bolder',
           color: '#fff',
           background: 'linear-gradient(65deg, #6D42AC, #8667E6)',
           border: '2px solid black',
@@ -84,7 +87,7 @@ export default {
         '.background-btn2': {
           padding: '30px 50px',
           'font-size': '16px',
-          'font-width': 'bolder',
+          'font-size': 'bolder',
           color: '#fff',
           background: 'black',
           border: '2px solid #fff',
