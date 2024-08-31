@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "./imageSlider";
+import Section from "./small_section";
 
 const Home = () => {
   const datas = [
@@ -30,6 +31,7 @@ const Home = () => {
   return (
     <div>
       <ImageSlider slider={datas}/>
+      <Section />
     </div>
   );
 };
