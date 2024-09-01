@@ -7,7 +7,7 @@ export default {
     extend: {},
   },
   plugins: [
-    plugin(function ({ addUtilities }) {
+    plugin(function ({ addUtilities, theme }) {
       const newUtilities = {
         ".nav-item": {
           "list-style-type": "none",
@@ -46,16 +46,33 @@ export default {
           cursor: "pointer",
           transition: "background-color 0.3s, box-shadow 0.3s",
         },
-        ".background-img": {
+        '.carousel': {
+          display: 'flex',
+          height: '100vh',
+          width: '100%',
+        },
+        ".carousel-wrapper": {
+          width: "100%",
+          height: "100%",
+          position: "relative",
+        },
+        ".carousel_card": {
+          position: 'absolute',
           padding: "1px",
           width: "100%",
-          height: "100vh",
-          //'background-image': "url('/src/assets/background/back-img1.jpg')",
+          height: "100%",
+          display: 'flex',
+          flex: '1',
+          overflow: 'hidden',
+          'object-fit': 'cover',
           "background-repeat": "no-repeat",
           "background-size": "cover",
           "background-position": "center",
         },
-        ".background-box": {
+        '.carousel_card_none': {
+          display: 'none'
+        },
+        ".carousel-box": {
           "background-color": "rgba(0, 0, 0, 0.5)",
           color: "white",
           padding: "20px",
@@ -64,13 +81,13 @@ export default {
           "margin-top": "11.5rem",
           "border-radius": "10px",
         },
-        ".background-btn-box": {
+        ".carousel-btn-box": {
           display: "flex",
           gap: "10px",
           "padding-top": "1rem",
           "padding-bottom": "0.6rem",
         },
-        ".background-btn1": {
+        ".carousel-btn1": {
           padding: "30px 50px",
           "font-size": "16px",
           "font-size": "bolder",
@@ -81,7 +98,7 @@ export default {
           cursor: "pointer",
           transition: "background-color 0.3s, box-shadow 0.3s",
         },
-        ".background-btn2": {
+        ".carousel-btn2": {
           padding: "30px 50px",
           "font-size": "16px",
           "font-size": "bolder",
@@ -95,11 +112,6 @@ export default {
             background: "linear-gradient(65deg, #6D42AC, #8667E6)",
             border: "2px solid black",
           },
-        },
-        ".slider-box": {
-          width: "100%",
-          height: "100vh",
-          position: "relative",
         },
         ".left-arrow-styles": {
           position: "absolute",
@@ -196,30 +208,53 @@ export default {
         },
 
         //What we do
-        ".what-we-do-box": {
-          margin: "0 6rem",
+        '.what-we-do-box': {
+          margin: "0 6rem 6rem",
+        },
+        '.what-we-do-box h1': {
+          "font-size": "2rem",
+          "font-weight": "400",
+          'text-align': 'center',
+          margin: '3.5rem 0'
+        },
+        '.what-btn-box': {
+          display: 'flex',
+          gap: '1rem'
+        },
+        '.what-we-do-btn': {
+          padding: "20px 40px",
+          margin: '1rem 0 0',
+          'font-size': '0.9rem',
+          'font-weight': '500',
+          color: "#fff",
+          background: "linear-gradient(65deg, #6D42AC, #8667E6)",
+          border: "3px solid #6C0BA9",
+          "border-radius": "5px",
+          cursor: "pointer",
+          '&:hover': {
+            background: '#6C0BA9',
+          }
         },
         '.what-text-box': {
           position: 'relative',
           width: '100%',
-          height: '300px',
-          overflow: 'hidden',
+          'place-items': 'center',
+          color: theme('colors.white'),
+          backgroundColor: theme('colors.white')
         },
         '.what-text-box::before': {
-          content: "",
+          content: '""',
           position: 'absolute',
-          top: '0',
-          left: '0',
-          right: '0',
-          bottom: '0',
-          "background-image": "url('/src/assets/background/chart.jpg')",
-          'background-size': 'cover',
-          'background-position': 'center',
-          opacity: '0.5',
-          'z-index': '1',
+          inset: '0',
+          'background-image': "url('/background/chart.jpg')",
+          opacity: '0.1'
         },
         '.what-text-content': {
-
+          color: theme('colors.black'),
+          isolation: 'isolate',
+          'font-size': '2rem',
+          'font-weight': '400',
+          width: '70%',
         }
       };
       addUtilities(newUtilities, ["responsive", "hover"]);

@@ -12,9 +12,9 @@ const What = () => {
             ready for anything, but is also designed to help you reach all your
             goals in the days ahead.
           </p>
-          <div>
-            <button>View Certification of Incorporation</button>
-            <button>USER MANUAL</button>
+          <div className="what-btn-box">
+            <button className="what-we-do-btn">View Certification of Incorporation</button>
+            <button className="what-we-do-btn">USER MANUAL</button>
           </div>
         </div>
       </div>
