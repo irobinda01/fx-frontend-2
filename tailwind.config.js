@@ -255,6 +255,14 @@ export default {
           'font-size': '2rem',
           'font-weight': '400',
           width: '70%',
+        },
+
+        // Our Services
+        '.ser-component': {
+          background: '#F9F9F9',
+          width: '31%',
+          padding: '3rem 1.3rem',
+          '&:hover': {}
         }
       };
       addUtilities(newUtilities, ["responsive", "hover"]);

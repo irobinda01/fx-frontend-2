@@ -2,6 +2,8 @@ import { useState } from 'react'
 import NavBar from './components/NavBar/navBar'
 import Home from './components/Home/home'
 import What from './components/What_Do/what_we_do'
+import Services from './components/Our-Services/our-services'
+import Liquid from './components/Liquid/liquid'
 import './App.css'
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <main>
         <Home />
         <What />
+        <Services />
+        <Liquid />
       </main>
     </>
   )
