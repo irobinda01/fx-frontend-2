@@ -6,4 +6,4 @@ const Liquid = () => {
   ) 
 }
 
-export default Liquid
+export default Liquid;

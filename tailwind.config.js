@@ -4,7 +4,28 @@ import plugin from "tailwindcss/plugin";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        moveImage: {
+          '0%': { top: '150px', left: '0' },
+          '25%': { top: '150px', left: '25px' },
+          '50%': { top: '175px', left: '25px' },
+          '75%': { top: '175px', left: '0' },
+          '100%': { top: '150px', left: '0' },
+        },
+        secondMoveImage: {
+          '0%': { top: '0', right: '0' },
+          '25%': { top: '0', right: '-25px' },
+          '50%': { top: '25px', right: '-25px' },
+          '75%': { top: '25px', right: '0' },
+          '100%': { top: '0', right: '0' },
+        },
+      },
+      animation: {
+        moveImage: 'moveImage 5s infinite',
+        secondMoveImage: 'secondMoveImage 5s infinite',
+      },
+    },
   },
   plugins: [
     plugin(function ({ addUtilities, theme }) {
@@ -263,7 +284,38 @@ export default {
           width: '31%',
           padding: '3rem 1.3rem',
           '&:hover': {}
-        }
+        },
+
+        //Options Trade
+        '.options-box': {
+          background: 'linear-gradient(297deg, rgba(2,0,36,1) 0%, rgba(105,78,233,1) 35%, rgba(47,214,107,1) 100%)',
+          margin: '50px 0',
+        },
+
+        //Perform
+        '.perform-container-1': {
+          position: 'relative',
+        },
+        '.moving-1-image': {
+          position: 'absolute',
+          top: '150px',
+          left: '0',
+          width: '40%',
+          //animation: 'moveImage 5s infinite',
+        },
+        '.moving-2-image': {
+          position: 'absolute',
+          top: '0',
+          right: '0',
+          width: '40%',
+          //animation: 'moveImage 5s infinite',
+        },
+        '.custom-list li::marker': {
+          color: '#B28C46',
+          'font-size': '2rem',
+          'font-weight': 'medium',
+          content: 'counter(list-item) ". "',
+        },
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),

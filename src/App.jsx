@@ -4,6 +4,8 @@ import Home from './components/Home/home'
 import What from './components/What_Do/what_we_do'
 import Services from './components/Our-Services/our-services'
 import Liquid from './components/Liquid/liquid'
+import Options from './components/Options/options'
+import Perform from './components/Perform/perform'
 import './App.css'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <What />
         <Services />
         <Liquid />
+        <Options />
+        <Perform />
       </main>
     </>
   )
