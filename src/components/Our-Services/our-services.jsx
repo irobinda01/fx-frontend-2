@@ -48,10 +48,12 @@ const Services = () => {
 
   const servicesElement = services.map((service, index) => {
     return(
-      <div key={index} className="flex flex-col flex-grow-0 flex-shrink-0 ser-component">
+      <div key={index} className="flex flex-col flex-grow-0 flex-shrink-0 bg-[#F9F9F9] w-[100%] 
+      lg:w-[31%] py-[1.5rem] lg:py-[3rem] px-[1.3rem] hover:shadow-lg">
         <img src= {service.image} alt="image of the services"/>
         <div>
-          <h3 className="text-center pt-[2.5rem] font-bold text-[1rem] md:text-[1.1rem] lg:text-[1.2rem]">{service.heading}</h3>
+          <h3 className="text-center pt-[2.5rem] font-bold text-[1rem] md:text-[1.1rem] 
+          lg:text-[1.2rem]">{service.heading}</h3>
           <p>{service.discription}</p>
           <button>Read more...</button>
         </div>
@@ -60,9 +62,9 @@ const Services = () => {
   })
 
   return (
-    <div className="flex flex-col px-[5rem]">
+    <div className="flex flex-col px-[2rem] lg:px-[5rem]">
       <h1 className="text-center font-bold text-[1rem] md:text-[1.2rem] lg:text-[1.4rem] pb-5">OUR SERVICES</h1>
-      <div className="flex flex-row flex-wrap gap-8 items-start justify-center">{servicesElement}</div>
+      <div className="flex flex-col lg:flex-row flex-wrap gap-10 lg:gap-8 items-start justify-center">{servicesElement}</div>
     </div>
   );
 };

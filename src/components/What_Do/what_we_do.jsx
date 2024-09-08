@@ -2,8 +2,8 @@ import React from "react";
 
 const What = () => {
   return (
-    <div className="what-we-do-box">
-      <h1>WHAT WE DO</h1>
+    <div className="lg:mx-[6rem] lg:mb-[6rem]">
+      <h1 className="lg:text-[2rem] lg:font-[400] text-center lg:my-[3.5rem]">WHAT WE DO</h1>
       <div className="what-text-box">
         <div className="what-text-content">
           <p>

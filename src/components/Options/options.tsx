@@ -2,8 +2,9 @@ import React from "react";
 
 const Options = () => {
   return (
-    <div className="options-box px-[2rem] flex justify-between w-full">
-      <div className="w-[50%] flex-none">
+    <div className="options-box px-[2rem] py-[2.5rem] flex flex-col lg:flex-row lg:justify-between 
+    text-[#fff] w-full">
+      <div className="w-[100%] lg:w-[50%] flex-none">
         <div>
           <img src="/options/liquid.jpg" className=""/>
         </div>
@@ -35,7 +36,7 @@ const Options = () => {
           </ul>
         </div>
       </div>
-      <div className="w-[45%] flex-none">
+      <div className="w-[100%] lg:w-[45%] flex-none">
         <h1 className="font-bold text-[1.3rem] mb-[2rem] mt-[3rem]">Options trading</h1>
         <p className="pb-[1.2rem]">
           Options trading is when you buy or sell an underlying asset at a

@@ -6,6 +6,8 @@ import Services from './components/Our-Services/our-services'
 import Liquid from './components/Liquid/liquid'
 import Options from './components/Options/options'
 import Perform from './components/Perform/perform'
+import Who from './components/Who_We_Are/who_we_are'
+import Strategy from './components/Strategy/strategy'
 import './App.css'
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Liquid />
         <Options />
         <Perform />
+        <Who />
+        <Strategy />
       </main>
     </>
   )

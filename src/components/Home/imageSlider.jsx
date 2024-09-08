@@ -1,18 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 
 const ImageSlider = ({ slider }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+
+  let timeOut = null;
+
+  useEffect(() => {
+    timeOut =
+      autoPlay &&
+      setTimeout(() => {
+        moveRight();
+      }, 3500);
+  });
+
+  const moveLeft = () => {
+    setCurrent(current === 0 ? slider.length - 1 : current - 1);
+  };
+  const moveRight = () => {
+    setCurrent(current === slider.length - 1 ? 0 : current + 1);
+  };
 
   return (
-    <div className="carousel">
+    <div
+      className="carousel"
+      onMouseEnter={() => {
+        setAutoPlay(false);
+        clearTimeout(timeOut)
+      }}
+      onMouseLeave={() => {
+        setAutoPlay(true);
+      }}
+    >
       <div className="carousel-wrapper">
         {slider.map((data, index) => {
           return (
             <div
-              className={index === 0 ? "carousel_card" : "carousel_card_none"}
+              className={
+                index === current ? "carousel_card carousel_card_active" : "carousel_card"
+              }
               key={index}
               style={{
                 backgroundImage: `url(${data.url})`,
@@ -32,12 +61,12 @@ const ImageSlider = ({ slider }) => {
             </div>
           );
         })}
-      </div>
-      <div className="left-arrow-styles">
-        <FaRegArrowAltCircleLeft />
-      </div>
-      <div className="right-arrow-styles">
-        <FaRegArrowAltCircleRight />
+        <div className="left-arrow-styles" onClick={moveLeft}>
+          <FaRegArrowAltCircleLeft />
+        </div>
+        <div className="right-arrow-styles" onClick={moveRight}>
+          <FaRegArrowAltCircleRight />
+        </div>
       </div>
     </div>
   );

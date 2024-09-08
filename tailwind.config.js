@@ -5,6 +5,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      skew: {
+        '20': '50deg', // Adds a skewX of 20 degrees
+        '50': '270deg'
+      },
       keyframes: {
         moveImage: {
           '0%': { top: '150px', left: '0' },
@@ -20,10 +24,18 @@ export default {
           '75%': { top: '25px', right: '0' },
           '100%': { top: '0', right: '0' },
         },
+        thirdMoveImage: {
+          '0%': { top: '150px', left: '50px' },
+          '25%': { top: '150px', left: '75px' },
+          '50%': { top: '175px', left: '75px' },
+          '75%': { top: '175px', left: '50px' },
+          '100%': { top: '150px', left: '50px' },
+        },
       },
       animation: {
         moveImage: 'moveImage 5s infinite',
         secondMoveImage: 'secondMoveImage 5s infinite',
+        thirdMoveImage: 'thirdMoveImage 5s infinite'
       },
     },
   },
@@ -89,9 +101,15 @@ export default {
           "background-repeat": "no-repeat",
           "background-size": "cover",
           "background-position": "center",
+          opacity: '0',
+          'pointer-events': 'none',
+          transform: 'scale(0)',
+          transition: '1s ease-in-out'
         },
-        '.carousel_card_none': {
-          display: 'none'
+        '.carousel_card_active': {
+          opacity: '1',
+          transform: 'scale(1)',
+          'pointer-events': 'visible'
         },
         ".carousel-box": {
           "background-color": "rgba(0, 0, 0, 0.5)",
@@ -293,13 +311,14 @@ export default {
         },
 
         //Perform
-        '.perform-container-1': {
+        '.perform-container': {
           position: 'relative',
+          width: '100%',
         },
         '.moving-1-image': {
           position: 'absolute',
           top: '150px',
-          left: '0',
+          left: '0px',
           width: '40%',
           //animation: 'moveImage 5s infinite',
         },
@@ -310,12 +329,35 @@ export default {
           width: '40%',
           //animation: 'moveImage 5s infinite',
         },
+        '.moving-3-image': {
+          position: 'absolute',
+          top: '150px',
+          left: '15px',
+          width: '40%',
+          //animation: 'moveImage 5s infinite',
+        },
+        '.moving-4-image': {
+          position: 'absolute',
+          top: '50px',
+          right: '0',
+          width: '40%',
+          //animation: 'moveImage 5s infinite',
+        },
         '.custom-list li::marker': {
           color: '#B28C46',
           'font-size': '2rem',
           'font-weight': 'medium',
           content: 'counter(list-item) ". "',
         },
+        '.google-btn': {
+          position: 'relative',
+          margin: '0 auto',
+          cursor: 'pointer',
+          'border-radius': '5px',
+        },
+
+        //Strategy
+        
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),
