@@ -26,34 +26,44 @@ const ImageSlider = ({ slider }) => {
 
   return (
     <div
-      className="carousel"
+      className="flex w-[100%] h-[80vh]"
       onMouseEnter={() => {
         setAutoPlay(false);
-        clearTimeout(timeOut)
+        clearTimeout(timeOut);
       }}
       onMouseLeave={() => {
         setAutoPlay(true);
       }}
     >
-      <div className="carousel-wrapper">
+      <div className="w-[100%] h-[80vh] relative">
         {slider.map((data, index) => {
           return (
             <div
               className={
-                index === current ? "carousel_card carousel_card_active" : "carousel_card"
+                index === current
+                  ? "carousel_card carousel_card_active"
+                  : "carousel_card"
               }
               key={index}
               style={{
                 backgroundImage: `url(${data.url})`,
               }}
             >
-              <div className="carousel-box">
-                <h1 className="text-4xl pb-5">{data.head}</h1>
-                <p className="text-2xl pb-5">{data.body}</p>
-                <p className="text-2xl pb-5">{data.foot}</p>
-                <div className="carousel-btn-box">
-                  <button className="carousel-btn1 text-3xl">LOGIN</button>
-                  <button className="carousel-btn2 text-2xl">
+              <div className="bg-black bg-opacity-50 text-[#fff] p-4 pt-6 lg:p-[20px] w-[80%] m-auto mt-[3rem] lg:mt-[11.5rem] rounded-[10px]">
+                <h1 className="text-xl font-medium lg:text-4xl lg:pb-5">{data.head}</h1>
+                <p className="text-lg lg:text-2xl lg:pb-5">{data.body}</p>
+                <p className="text-lg lg:text-2xl lg:pb-5">{data.foot}</p>
+                <div className="flex gap-[10px] pt-[1rem] pb-[0.6rem]">
+                  <button
+                    className="py-3 px-4 rounded-[5px] border-none lg:py-[30px] lg:px-[50px] font-semibold text-[#fff] bg-gradient-to-tr from-[#6D42AC] to-[#8667E6] 
+                  lg:text-3xl border-black border-[1px] lg:rounded-[30px] cursor-pointer transition-all duration-300"
+                  >
+                    LOGIN
+                  </button>
+                  <button 
+                    className=" py-3 px-4 rounded-[5px] border-none lg:py-[30px] lg:px-[50px] font-semibold text-[#fff] bg-black lg:text-2xl border-white border-[2px]
+                    lg:rounded-[30px] cursor-pointer transition-all duration-300 hover:border-black 
+                    hover:bg-gradient-to-tr from-[#6D42AC] to-[#8667E6]">
                     GET STARTED
                   </button>
                 </div>
@@ -61,10 +71,18 @@ const ImageSlider = ({ slider }) => {
             </div>
           );
         })}
-        <div className="left-arrow-styles" onClick={moveLeft}>
+        <div
+          className="absolute top-[50%] left-[7px] lg:left-[32px] text-[30px] lg:text-[45px] text-[#fff] z-10 transform -translate-y-1/2
+        cursor-pointer"
+          onClick={moveLeft}
+        >
           <FaRegArrowAltCircleLeft />
         </div>
-        <div className="right-arrow-styles" onClick={moveRight}>
+        <div
+          className="absolute top-[50%] right-[7px] lg:right-[32px] text-[30px] lg:text-[45px] text-[#fff] z-10 transform -translate-y-1/2
+        cursor-pointer"
+          onClick={moveRight}
+        >
           <FaRegArrowAltCircleRight />
         </div>
       </div>
