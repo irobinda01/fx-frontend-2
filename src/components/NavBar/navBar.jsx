@@ -12,11 +12,11 @@ const NavBar = () => {
       <div className={isOpen ? "hidden" : "lg:hidden"}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="focus:outline-none flex flex-col gap-1"
+          className="focus:outline-none flex flex-col gap-1 border-2 border-[#7F5CD5] p-2"
         >
-          <div className="w-10 h-1 bg-[#7F5CD5]"></div>
-          <div className="w-10 h-1 bg-[#7F5CD5]"></div>
-          <div className="w-10 h-1 bg-[#7F5CD5]"></div>
+          <div className="w-5 h-[0.1rem] bg-[#7F5CD5]"></div>
+          <div className="w-5 h-[0.1rem] bg-[#7F5CD5]"></div>
+          <div className="w-5 h-[0.1rem] bg-[#7F5CD5]"></div>
         </button>
       </div>
       <div className={isOpen ? "lg:hidden absolute right-40 z-20" : "hidden"}>
@@ -34,13 +34,13 @@ const NavBar = () => {
       </div>
 
       {/* Links for desktop */}
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex justify-center">
         <ul className="list-none flex gap-[40px] pl-[8rem] pr-[1rem]">
           <li className="nav-items">
             <a
               href="#"
               className="no-underline text-[#333] py-0 px-[0.5rem] rounded-[4px] font-bold text-[13px]
-            hover:text-[#6D42AC] hover:bg-[#E0C1D7] transition-all duration-[0.3s]"
+            hover:text-[#6D42AC] transition-all duration-[0.3s]"
             >
               ABOUT
             </a>
@@ -49,13 +49,13 @@ const NavBar = () => {
             <a
               href="#"
               className="no-underline text-[#333] py-0 px-[0.5rem] rounded-[4px] font-bold text-[13px]
-            hover:text-[#6D42AC] hover:bg-[#E0C1D7] transition-all duration-[0.3s] flex justify-center"
+            hover:text-[#6D42AC] transition-all duration-[0.3s] flex justify-center"
             >
               MIRROR TRADE
             </a>
             <div
-              className="absolute inline-flex top-[-300px] lg:left-[33rem] z-30 lg:group-hover:top-[69px] 
-            bg-white lg:group-hover:right-20 w-[13.8%] pt-[3rem]"
+              className="absolute inline-flex top-[-300px] lg:left-[33.5rem] z-30 lg:group-hover:top-[69px] 
+            bg-white lg:group-hover:right-20 w-[13.8%] pt-[3rem] transition-all duration-[1s]"
             >
               <ul className="flex flex-col list-none p-0 m-0">
                 <li
@@ -97,13 +97,13 @@ const NavBar = () => {
             <a
               href="#"
               className="no-underline text-[#333] py-0 px-[0.5rem] rounded-[4px] font-bold text-base 
-            lg:text-[13px] hover:text-[#6D42AC] hover:bg-[#E0C1D7] transition-all duration-[0.3s] flex justify-start"
+            lg:text-[13px] hover:text-[#6D42AC] transition-all duration-[0.3s] flex justify-start"
             >
               INVESTMENT PRODUCT
             </a>
             <div
-              className="absolute top-[-400px] lg:left-[43.5rem] z-30 lg:group-hover:top-[69px] bg-white
-            lg:group-hover:right-20 w-[13.8%] pt-[3rem]"
+              className="absolute top-[-400px] lg:left-[43.1rem] z-30 lg:group-hover:top-[69px] bg-white
+            lg:group-hover:right-20 w-[13.8%] pt-[3rem] transition-all duration-[1s]"
             >
               <ul className="flex flex-col list-none p-0 m-0">
                 <li
@@ -177,12 +177,12 @@ const NavBar = () => {
             <a
               href="#"
               className="no-underline text-[#333] py-0 px-[0.5rem] rounded-[4px] font-bold text-[13px]
-            hover:text-[#6D42AC] hover:bg-[#E0C1D7] transition-all duration-[0.3s] flex justify-center"
+            hover:text-[#6D42AC] transition-all duration-[0.3s] flex justify-center"
             >
               PLANING SERVICES
             </a>
-            <div className="absolute top-[-300px] lg:left-[56.5rem] z-30 lg:group-hover:top-[69px] bg-white
-            lg:group-hover:right-20 w-[13.8%] pt-[3rem]"
+            <div className="absolute top-[-300px] lg:left-[55.5rem] z-30 lg:group-hover:top-[69px] bg-white
+            lg:group-hover:right-20 w-[13.8%] pt-[3rem] transition-all duration-[1s]"
             >
               <ul className="flex flex-col list-none p-0 m-0">
                 <li
@@ -232,7 +232,7 @@ const NavBar = () => {
             <a
               href="#"
               className="no-underline text-[#333] py-0 px-[0.5rem] rounded-[4px] font-bold text-[13px]
-            hover:text-[#6D42AC] hover:bg-[#E0C1D7] transition-all duration-[0.3s] flex justify-center"
+            hover:text-[#6D42AC] transition-all duration-[0.3s] flex justify-center"
             >
               INSIGHT
             </a>
@@ -280,6 +280,8 @@ const NavBar = () => {
             >
               INSIGHT
             </a>
+            <button className="bg-gradient-to-tr from-[#6D42AC] to-[#8667E6] border-none
+            rounded-[5px] text-[#fff] font-semibold">GET STARTED</button>
           </div>
         </div>
       )}
