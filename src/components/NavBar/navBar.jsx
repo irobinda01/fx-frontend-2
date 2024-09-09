@@ -5,7 +5,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center px-[2rem] md:px-[5.5rem] py-[1rem] relative">
+    <nav className="flex justify-between items-center px-[1rem] md:px-[5.5rem] py-[1rem] relative">
       <img src={logo} className="w-[7rem] md:w-[10rem] lg:w-[12rem]" />
 
       {/* Menu button for mobile */}
@@ -281,7 +281,7 @@ const NavBar = () => {
               INSIGHT
             </a>
             <button className="bg-gradient-to-tr from-[#6D42AC] to-[#8667E6] border-none
-            rounded-[5px] text-[#fff] font-semibold">GET STARTED</button>
+            rounded-[5px] text-[#fff] font-semibold py-4">GET STARTED</button>
           </div>
         </div>
       )}
