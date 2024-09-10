@@ -9,7 +9,7 @@ const Perform = () => {
         <h1 className="text-[1.5rem] md:text-[2rem] text-[#B28C46] text-center md:mt-[3rem] md:mb-[0.7rem]">EXPLORE OPTIONS TRADING</h1>
         <p className="text-center text-[#626B9D] text-[0.7rem] font-semibold mb-2">OPTIONS TRADING</p>
         <p className="text-center text-[#626B9D] text-[0.7rem] font-semibold">TRADING STEPS</p>
-        <div className="flex flex-col justify-center lg:flex-row lg:items-center">
+        <div className="flex flex-col justify-center px-4 lg:flex-row lg:items-center">
           <div className="perform-container w-[100%] mb-[3rem] lg:order-2 lg:w-[50%] flex-none">
             <img src="/perform/perform-1.png"/>
             <img src="/perform/movie-1.png" className="moving-1-image animate-moveImage"/>
