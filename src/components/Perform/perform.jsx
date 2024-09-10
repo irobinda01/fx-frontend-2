@@ -45,10 +45,10 @@ const Perform = () => {
         </div>
         <h3 className="text-[#03105F] font-bold text-[1rem] text-center my-[1rem]">HOW TO TRADE OPTIONS IN FOUR STEPS</h3>
         <div className="flex flex-col justify-center lg:flex-row lg:items-center">
-          <div className="perform-container px-4 w-[100%] lg:order-2 lg:w-[50%] flex-none">
+          <div className="perform-container w-[100%] lg:order-2 lg:w-[50%] flex-none">
             <img src="/perform/perform-2.png"/>
             <img src="/perform/movie-3.png" className="moving-3-image animate-thirdMoveImage"/>
-            <img src="/perform/movie-4.png" className="moving-4-image animate-secondMoveImage"/>
+            <img src="/perform/movie-4.png" className="moving-4-image animate-secondMoveImage mr-4"/>
           </div>
           <ol className="custom-list text-[#03105F] text-[0.9rem] font-medium mt-[0] ml-[2rem] mb-[3rem]">
             <li>
