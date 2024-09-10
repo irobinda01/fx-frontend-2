@@ -2,42 +2,59 @@ import React from "react";
 
 const Options = () => {
   return (
-    <div className="options-box px-[2rem] py-[2.5rem] flex flex-col lg:flex-row lg:justify-between 
-    text-[#fff] w-full">
+    <div
+      className="options-box px-[1rem] py-[1rem] md:px-[3rem] md:pb-12 lg:px-[2rem] lg:py-[2.5rem] flex flex-col 
+    lg:flex-row lg:justify-between text-[#fff] w-full"
+    >
       <div className="w-[100%] lg:w-[50%] flex-none">
         <div>
-          <img src="/options/liquid.jpg" className=""/>
+          <img src="/options/liquid.jpg" className="" />
         </div>
-        <div>
-          <h1 className="font-bold text-[1.3rem] mt-[2rem] mb-[3rem]">How to trade options in four steps</h1>
+        <div className="mt-8">
+          <h1 className="font-bold text-center lg:text-start text-[1.3rem] mb-2 lg:mt-[2rem] 
+          lg:mb-[3rem]">
+            How to trade options in four steps
+          </h1>
           <ul className="pl-5 space-y-2 mb-10">
             <li className="relative before:content-['★'] before:absolute before:-left-5">
-              <span className="font-bold text-[1rem]">Investment objectives</span>. - This usually includes income, growth,
-              capital preservation or speculation.
+              <span className="font-bold text-[1rem]">
+                Investment objectives
+              </span>
+              . - This usually includes income, growth, capital preservation or
+              speculation.
             </li>
             <li className="relative before:content-['★'] before:absolute before:-left-5">
-              <span className="font-bold text-[1rem]">Trading experience</span>. - The broker will want to know your knowledge
-              of investing, how long you’ve been trading stocks or options, how
-              many trades you make per year and the size of your trades.
+              <span className="font-bold text-[1rem]">Trading experience</span>.
+              - The broker will want to know your knowledge of investing, how
+              long you’ve been trading stocks or options, how many trades you
+              make per year and the size of your trades.
             </li>
             <li className="relative before:content-['★'] before:absolute before:-left-5">
-              <span className="font-bold text-[1rem]">Personal financial information</span>. - Have on hand your liquid net
-              worth (or investments easily sold for cash), annual income, total
-              net worth and employment information.
+              <span className="font-bold text-[1rem]">
+                Personal financial information
+              </span>
+              . - Have on hand your liquid net worth (or investments easily sold
+              for cash), annual income, total net worth and employment
+              information.
             </li>
             <li className="relative before:content-['★'] before:absolute before:-left-5">
-              <span className="font-bold text-[1rem]">The types of options you want to trade</span>. - For instance, calls,
-              puts or spreads. And whether they are covered or naked. The seller
-              or writer of options has an obligation to deliver the underlying
-              stock if the option is exercised. If the writer also owns the
-              underlying stock, the option position is covered. If the option
-              position is left unprotected, it's naked.
+              <span className="font-bold text-[1rem]">
+                The types of options you want to trade
+              </span>
+              . - For instance, calls, puts or spreads. And whether they are
+              covered or naked. The seller or writer of options has an
+              obligation to deliver the underlying stock if the option is
+              exercised. If the writer also owns the underlying stock, the
+              option position is covered. If the option position is left
+              unprotected, it's naked.
             </li>
           </ul>
         </div>
       </div>
       <div className="w-[100%] lg:w-[45%] flex-none">
-        <h1 className="font-bold text-[1.3rem] mb-[2rem] mt-[3rem]">Options trading</h1>
+        <h1 className="font-bold text-center lg:text-start text-[1.3rem] mb-2 lg:mb-[2rem] lg:mt-[3rem]">
+          Options trading
+        </h1>
         <p className="pb-[1.2rem]">
           Options trading is when you buy or sell an underlying asset at a
           pre-negotiated price by a certain future date.

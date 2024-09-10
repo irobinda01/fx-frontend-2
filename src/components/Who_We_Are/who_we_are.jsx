@@ -9,7 +9,7 @@ const Who = () => {
         <div className="bg-[url('/who/who-image-3.jpg')] bg-cover bg-center bg-no-repeat flex-none w-[100%]
         lg:w-[50%]">
           <div className="text-[rgb(255,255,255)] bg-black bg-opacity-50 h-[100%] lg:pl-[5rem] lg:py-[5rem] 
-          lg:pr-[1rem] p-[2rem]">
+          lg:pr-[1rem] p-[1rem] md:px-12 md:py-8">
             <h2 className="text-[1.35rem] mb-[1.5rem] lg:text-[1.5rem] lg:mb-[3rem]">Welcome to Bitstock Assets LLC</h2>
             <p>
               We begin by getting a deep understanding of your personal situation,

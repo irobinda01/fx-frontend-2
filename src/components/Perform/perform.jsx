@@ -5,7 +5,7 @@ const Perform = () => {
   return (
     <div>
       <h1 className="text-[1.5rem] md:text-[2rem] text-[#B28C46] text-center my-[1rem] md:mt-[8rem] md:mb-[4rem]">TRADE OUR TOP PERFORMING PRODUCTS</h1>
-      <div className="bg-[rgb(241,243,249)] py-[1rem] px-[2rem] md:px-[5rem] lg:px-[10rem] pb-[2rem]">
+      <div className="bg-[rgb(241,243,249)] py-[1rem] px-[1rem] md:px-[3rem] lg:px-[10rem] pb-[2rem]">
         <h1 className="text-[1.5rem] md:text-[2rem] text-[#B28C46] text-center md:mt-[3rem] md:mb-[0.7rem]">EXPLORE OPTIONS TRADING</h1>
         <p className="text-center text-[#626B9D] text-[0.7rem] font-semibold mb-2">OPTIONS TRADING</p>
         <p className="text-center text-[#626B9D] text-[0.7rem] font-semibold">TRADING STEPS</p>

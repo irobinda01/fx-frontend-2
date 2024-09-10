@@ -47,24 +47,41 @@ const Services = () => {
   ];
 
   const servicesElement = services.map((service, index) => {
-    return(
-      <div key={index} className="flex flex-col flex-grow-0 flex-shrink-0 bg-[#F9F9F9] w-[100%] 
-      lg:w-[31%] py-[1.5rem] lg:py-[3rem] px-[1.3rem] hover:shadow-lg">
-        <img src= {service.image} alt="image of the services"/>
+    return (
+      <div
+        key={index}
+        className="flex flex-col flex-grow-0 flex-shrink-0 bg-[#F9F9F9] w-[100%] md:mx-0 md:min-w-[40%]
+      lg:min-w-[31%] md:max-w-[31%] lg:-max-w-[31%] py-[1.5rem] lg:py-[3rem] px-[1.3rem] shadow-[0_0_9px_0_rgba(0,0,0,0.2)] 
+      hover:shadow-[0_0_9px_0_rgba(0,0,0,0.75)] group"
+      >
+        <img src={service.image} alt="image of the services" />
         <div>
-          <h3 className="text-center pt-[2.5rem] font-bold text-[1rem] md:text-[1.1rem] 
-          lg:text-[1.2rem]">{service.heading}</h3>
+          <h3
+            className="text-center pt-[2.5rem] font-bold text-[1rem] md:text-[1.1rem] 
+          lg:text-[1.2rem] group-hover:text-[#6C0BA9]"
+          >
+            {service.heading}
+          </h3>
           <p>{service.discription}</p>
           <button>Read more...</button>
         </div>
       </div>
-    )
-  })
+    );
+  });
 
   return (
-    <div className="flex flex-col px-[2rem] lg:px-[5rem]">
-      <h1 className="text-center font-bold text-[1rem] md:text-[1.2rem] lg:text-[1.4rem] pb-5">OUR SERVICES</h1>
-      <div className="flex flex-col lg:flex-row flex-wrap gap-10 lg:gap-8 items-start justify-center">{servicesElement}</div>
+    <div className="flex flex-col px-[1rem] lg:px-[5rem]">
+      <h1
+        className="text-center font-extrabold text-[1.2rem] md:text-[1.2rem] lg:text-[1.4rem] pb-5"
+      >
+        OUR SERVICES
+      </h1>
+      <div
+        className="flex flex-col lg:flex-row flex-wrap gap-10 lg:gap-8 items-start md:flex-row md:justify-evenly
+      justify-center mt-3"
+      >
+        {servicesElement}
+      </div>
     </div>
   );
 };

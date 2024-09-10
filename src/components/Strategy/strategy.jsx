@@ -34,7 +34,8 @@ const Strategy = () => {
 
   const strategyElement = data.map((box, index) => {
     return(
-      <div key={index} className="group mx-[auto] border-2 px-5 pb-5 w-[80%] lg:w-[21%]">
+      <div key={index} className="group mx-[auto] md:mx-0 border-2 px-5 pb-5 w-[90%] md:min-w-[40%] lg:min-w-[21%]
+      flex-wrap md:max-w-[40%] lg:max-w-[21%]">
         <div className="flex items-start justify-center">{box.icon}</div>
         <p className="text-[0.8rem] text-center">{box.discription}</p>
       </div>
@@ -42,20 +43,21 @@ const Strategy = () => {
   })
 
   return (
-    <div className="px-[2rem] lg:px-[5rem]">
+    <div className="px-[1rem] lg:px-[5rem]">
       <h1
-        className="font-bold text-center text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] pt-[2rem] pb-[1rem]
+        className="font-extrabold text-center text-[1.2rem] md:text-[1.1rem] lg:text-[1.2rem] pt-[2rem] pb-[1rem]
       lg:pt-[8rem] lg:pb-[2.5rem]"
       >
         INVESTMENT STRATEGY
       </h1>
-      <p className="text-[1.2rem] text-center font-5 mb-[1rem]">
+      <p className="text-base lg:text-[1.2rem] lg:text-center font-5 mb-[1rem]">
         We seek out business teams with the coherence and expertise to develop a
         project capable of reaping long-term financial returns, which has
         positioned us as a firm with reliable investment expertise and
         dependable profitability.
       </p>
-      <div className="my-[0] lg:my-[5rem] flex justify-between gap-5 flex-col lg:flex-row">{strategyElement}</div>
+      <div className="my-6 lg:my-[5rem] flex flex-wrap flex-grow-0 flex-shrink-0 justify-between gap-5 flex-col 
+      md:flex-row md:justify-evenly lg:flex-row">{strategyElement}</div>
     </div>
   );
 };

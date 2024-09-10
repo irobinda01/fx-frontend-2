@@ -260,20 +260,6 @@ export default {
           display: 'flex',
           gap: '1rem'
         },
-        '.what-we-do-btn': {
-          padding: "20px 40px",
-          margin: '1rem 0 0',
-          'font-size': '0.9rem',
-          'font-weight': '500',
-          color: "#fff",
-          background: "linear-gradient(65deg, #6D42AC, #8667E6)",
-          border: "3px solid #6C0BA9",
-          "border-radius": "5px",
-          cursor: "pointer",
-          '&:hover': {
-            background: '#6C0BA9',
-          }
-        },
         '.what-text-box': {
           position: 'relative',
           width: '100%',
