@@ -15,7 +15,7 @@ const Options = () => {
           lg:mb-[3rem]">
             How to trade options in four steps
           </h1>
-          <ul className="pl-5 space-y-2 mb-10">
+          <ul className="lg:pl-5 space-y-2 mb-10">
             <li className="relative before:content-['★'] before:absolute before:-left-5">
               <span className="font-bold text-[1rem]">
                 Investment objectives

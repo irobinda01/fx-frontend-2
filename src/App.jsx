@@ -9,6 +9,9 @@ import Perform from './components/Perform/perform'
 import Who from './components/Who_We_Are/who_we_are'
 import Strategy from './components/Strategy/strategy'
 import './App.css'
+import Mirror from './components/Mirror/mirror'
+import Responsible from './components/Responsible/responsible'
+import Management from './components/Management/management'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +28,9 @@ function App() {
         <Perform />
         <Who />
         <Strategy />
+        <Mirror />
+        <Responsible />
+        <Management />
       </main>
     </>
   )

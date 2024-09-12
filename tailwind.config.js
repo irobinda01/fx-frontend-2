@@ -31,11 +31,15 @@ export default {
           '75%': { top: '175px', left: '50px' },
           '100%': { top: '150px', left: '50px' },
         },
+        scrollLeft: {
+          to: { left: '-200px' },
+        },
       },
       animation: {
         moveImage: 'moveImage 5s infinite',
         secondMoveImage: 'secondMoveImage 5s infinite',
-        thirdMoveImage: 'thirdMoveImage 5s infinite'
+        thirdMoveImage: 'thirdMoveImage 5s infinite',
+        scrollLeft: 'scrollLeft 30s linear infinite',
       },
     },
   },
@@ -342,7 +346,26 @@ export default {
           'border-radius': '5px',
         },
 
-        //Strategy
+        //Liquidity
+
+        '.liquidity-wrapper': {
+          width: '90%',
+          'max-width': '1536px',
+          'margin-inline': 'auto',
+          position: 'relative',
+          height: '100px',
+          'margin-top': '5rem',
+          overflow: 'hidden',
+        },
+
+        '.item': {
+          width: '170px',
+          height: '50px',
+          'background-color': 'white',
+          'border-radius': '6px',
+          position: 'absolute',
+          left: '100%',
+        }
         
       };
       addUtilities(newUtilities, ["responsive", "hover"]);

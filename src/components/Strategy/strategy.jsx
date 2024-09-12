@@ -43,10 +43,10 @@ const Strategy = () => {
   })
 
   return (
-    <div className="px-[1rem] lg:px-[5rem]">
+    <div className="px-[1rem] md:px-[3rem] lg:px-[5rem]">
       <h1
-        className="font-extrabold text-center text-[1.2rem] md:text-[1.1rem] lg:text-[1.2rem] pt-[2rem] pb-[1rem]
-      lg:pt-[8rem] lg:pb-[2.5rem]"
+        className="font-extrabold text-center text-[1.2rem] md:text-[1.3rem] lg:text-[1.3rem] pt-[2rem] pb-[1rem]
+      lg:pt-[8rem] lg:pb-[2.5rem] md:font-bold"
       >
         INVESTMENT STRATEGY
       </h1>
